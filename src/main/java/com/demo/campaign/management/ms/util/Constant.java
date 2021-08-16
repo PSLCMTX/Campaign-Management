@@ -1,4 +1,4 @@
-package com.demo.campaign_management_ms.util;
+package com.demo.campaign.management.ms.util;
 
 public class Constant {
 	

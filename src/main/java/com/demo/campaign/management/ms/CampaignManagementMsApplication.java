@@ -1,4 +1,4 @@
-package com.demo.campaign_management_ms;
+package com.demo.campaign.management.ms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
