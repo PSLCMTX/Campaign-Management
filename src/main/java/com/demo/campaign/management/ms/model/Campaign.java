@@ -1,4 +1,4 @@
-package com.demo.campaign_management_ms.model;
+package com.demo.campaign.management.ms.model;
 
 import java.util.List;
 
@@ -19,6 +19,12 @@ public class Campaign {
 	private List cateogry;
 	
 	
+
+	/**
+	 * 
+	 */
+
+
 
 	/**
 	 * @param id
@@ -42,6 +48,15 @@ public class Campaign {
 		this.price = price;
 		this.cateogry = cateogry;
 	}
+
+
+
+	/**
+	 * 
+	 */
+	public Campaign() {
+		super();
+}
 
 
 

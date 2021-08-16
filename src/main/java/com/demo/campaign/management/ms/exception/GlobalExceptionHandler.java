@@ -1,4 +1,4 @@
-package com.demo.campaign_management_ms.exception;
+package com.demo.campaign.management.ms.exception;
 
 import java.util.Date;
 

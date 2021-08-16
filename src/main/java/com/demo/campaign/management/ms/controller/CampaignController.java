@@ -1,6 +1,8 @@
-package com.demo.campaign_management_ms.controller;
+package com.demo.campaign.management.ms.controller;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,9 +12,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.campaign_management_ms.exception.ResourceNotFoundException;
-import com.demo.campaign_management_ms.model.Campaign;
-import com.demo.campaign_management_ms.service.CampaignService;
+import com.demo.campaign.management.ms.exception.ResourceNotFoundException;
+import com.demo.campaign.management.ms.model.Campaign;
+import com.demo.campaign.management.ms.service.CampaignService;
 
 @RestController
 public class CampaignController {
@@ -37,7 +39,7 @@ public class CampaignController {
  * @throws ResourceNotFoundException
  */
 	@GetMapping("/campaign/{id}")
-	public Campaign getlistofCampaignId(@PathVariable(value = "id") Long cgid) throws ResourceNotFoundException {
+	public Optional<Campaign> getlistofCampaignId(@PathVariable(value = "id") Long cgid) throws ResourceNotFoundException {
 		return campaignService.getCampaignById(cgid);
 
 	}
@@ -62,7 +64,7 @@ public class CampaignController {
 	 */
 
 	@PutMapping("campaign/{cgid}")
-	public Campaign updateCampaign(@RequestBody Campaign campaignDetail, @PathVariable long cgid)
+	public Optional<Campaign> updateCampaign(@RequestBody Campaign campaignDetail, @PathVariable long cgid)
 			throws ResourceNotFoundException {
 		return campaignService.updateNewCampaign(campaignDetail, cgid);
 
